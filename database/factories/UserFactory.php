@@ -22,10 +22,13 @@ class UserFactory extends Factory
     {
         return [
             'name' => fake()->name(),
+            'identity_number' => fake()->unique()->numerify('##########'),
             'email' => fake()->unique()->safeEmail(),
             'email_verified_at' => now(),
+            'address_1' => fake()->address(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'registration_status_id' => 2, // diluluskan
         ];
     }
 
