@@ -19,7 +19,7 @@ class UserApiController extends Controller
             'identity_number' => $input['identity_number'],
             'email' => $input['email'],
             'address_1' => $input['address_1'],
-            'password' => Hash::make($input['password']),
+            'password' => Hash::make($input['password'] ?? 'password'),
             'registration_status_id' => 1 //new
         ]);
 

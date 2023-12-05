@@ -27,16 +27,16 @@ class CreateUserRequest extends FormRequest
             'identity_number' => ['required', 'max_digits:12'],
             'email' => ['required', 'email', 'max:200', 'unique:users'],
             'address_1' => ['required', 'string', 'max:200'],
-            'password' => [
-                'required',
-                'max:64',
-                'confirmed',
-                Password::min(12)
-                    ->mixedCase()
-                    ->numbers()
-                    ->symbols()
-                    ->uncompromised(3),
-            ],
+//            'password' => [
+//                'required',
+//                'max:64',
+//                'confirmed',
+//                Password::min(12)
+//                    ->mixedCase()
+//                    ->numbers()
+//                    ->symbols()
+//                    ->uncompromised(3),
+//            ],
         ];
     }
 }
