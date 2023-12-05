@@ -35,7 +35,7 @@ class UserApiController extends Controller
             ->first();
 
         if(!$user) {
-            return response(['message' => 'Pengguna ini tiada di dalam pangkalan data Skuad AADK'], 419);
+            return response(['message' => 'Pengguna ini tiada di dalam sistem'], 419);
         }
 
         $data = [
